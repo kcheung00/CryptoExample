@@ -1,3 +1,5 @@
+package com.gundam.app;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
@@ -40,11 +42,17 @@ public class EncryptEntirePropertiesFile {
     }
 
     public static void main(String[] args) throws Exception {
+
+    	// Update these paths to match your project structure
+        String inputFile = "src/main/resources/config.properties";
+        String outputFile = "src/main/resources/config.encrypted";
+
         // Encrypt the file (run once)
-        encryptFile("config.properties", "config.encrypted");
+        encryptFile(inputFile, outputFile);// Encrypt the file (run once)
+        
 
         // Decrypt and use the properties
-        Properties props = decryptFile("config.encrypted");
+        Properties props = decryptFile("src/main/resources/config.encrypted");
         System.out.println("Decrypted Properties: " + props);
     }
 }
