@@ -72,7 +72,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>com.gundam.app.EncryptEntirePropertiesFile</mainClass>
+              <mainClass>com.gundam.app.CryptoTool</mainClass>
             </manifest>
           </archive>
         </configuration>
