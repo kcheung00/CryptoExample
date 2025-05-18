@@ -9,9 +9,9 @@ import java.util.Properties;
 public class CryptoTool {
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
-    private static final String KEY = "16ByteSecretKey!"; // Must be 16, 24, or 32 bytes for AES
-
-    // Encrypt the properties file
+    private static final String KEY = "F3b7sX9qT2mZ0wVxK8r1N5j2Y4u6L0pQ"; // Must be 16, 24, or 32 bytes for AES
+  
+    // Encrypt the file
     public static void encryptFile(String inputFile, String outputFile) throws Exception {
         SecretKeySpec keySpec = new SecretKeySpec(KEY.getBytes(StandardCharsets.UTF_8), ALGORITHM);
         Cipher cipher = Cipher.getInstance(TRANSFORMATION);
@@ -25,7 +25,7 @@ public class CryptoTool {
         }
     }
 
-    // Decrypt the properties file
+    // Decrypt the file
     public static void decryptFile(String inputFile, String outputFile) throws Exception {
         SecretKeySpec keySpec = new SecretKeySpec(KEY.getBytes(StandardCharsets.UTF_8), ALGORITHM);
         Cipher cipher = Cipher.getInstance(TRANSFORMATION);
